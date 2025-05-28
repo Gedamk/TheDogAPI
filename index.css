@@ -1,3 +1,17 @@
+/* Import Google Fonts */  
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* other styles */
+}
+
+header h1,
+#dog-section h2,
+nav button {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Reset basic styles */
 * {
   box-sizing: border-box;
@@ -7,9 +21,9 @@
 
 /* Body layout and font */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff8f0; /* warm neutral, like puppy fur */
-  color: #3b2f2f;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f1f4ff; /* Soft twilight sky */
+  color: #3c2f4a;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -17,20 +31,45 @@ body {
 
 /* Header and Footer */
 header, footer {
-  background-color: #fddcaa; /* golden retriever gold */
+  background-color: #b4c5e4;
   text-align: center;
   padding: 1rem 0;
 }
 
 header h1 {
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: #5c3a1e; /* chocolate brown */
+  color: #3c2f4a;
 }
 
 footer p {
   font-size: 0.9rem;
-  color: #7c6c60;
+  color: #5a5472;
 }
+
+/* 🔽 Navigation Bar Styling */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #7d89b3;
+  padding: 1rem;
+}
+
+nav button {
+  background: #ffe9e3;
+  border: 2px solid #3c2f4a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #f7d6cf;
+}
+/* 🔼 End of Navigation Styling */
 
 /* Main section */
 main {
@@ -43,8 +82,8 @@ main {
 
 /* Dog viewer card */
 #dog-section {
-  background-color: #fffdf9;
-  border-radius: 12px;
+  background-color: #ffffff;
+  border: 2px solid #e6e6ff;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   max-width: 500px;
   width: 100%;
@@ -55,8 +94,9 @@ main {
 
 /* Heading inside main section */
 #dog-section h2 {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
-  color: #4e3629;
+  color: #4b3d60;
   margin-bottom: 1rem;
 }
 
@@ -73,13 +113,13 @@ main {
 #dog-output p {
   font-size: 1.15rem;
   font-weight: bold;
-  color: #6b4f3f;
+  color: #5a4c76;
 }
 
 /* Button styling */
 #new-dog-btn {
-  background-color: #a5dd9b; /* playful green like a tennis ball */
-  color: #1f3b2d;
+  background-color: #dab6fc;
+  color: #3c2f4a;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -87,10 +127,11 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 #new-dog-btn:hover {
-  background-color: #8ed081;
+  background-color: #c78fff;
 }
 
 /* Responsive layout */
@@ -107,3 +148,7 @@ main {
     width: 100%;
   }
 }
+
+
+
+
