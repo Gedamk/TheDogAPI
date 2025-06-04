@@ -30,7 +30,7 @@ function fetchBreeds() {
           <h3>${breed.name}</h3>
           <p><strong>Temperament:</strong> ${breed.temperament || "N/A"}</p>
           <p><strong>Life Span:</strong> ${breed.life_span}</p>
-          <button onclick="fetchBreedImage(${breed.id}, '${breed.name}')">Show Image</button>
+          <button onclick="fetchBreedImage(${breed.id}, '${breed.name.replace(/'/g, "\\'")}')">Show Image</button>
         </div>
       `).join("");
       dogOutput.innerHTML = `<h2>Explore Dog Breeds</h2>${breedListHTML}`;
@@ -58,18 +58,20 @@ function fetchBreedImage(breedId, breedName) {
     });
 }
 
-// Event listeners
+// Navigation handlers
 newDogBtn.addEventListener("click", fetchRandomDog);
+
 navRandomBtn.addEventListener("click", () => {
   fetchRandomDog();
   newDogBtn.style.display = "inline-block";
 });
+
 navBreedsBtn.addEventListener("click", () => {
   fetchBreeds();
   newDogBtn.style.display = "none";
 });
 
-// Load a random dog on initial page load
+// Load random dog on first visit
 fetchRandomDog();
 
 
